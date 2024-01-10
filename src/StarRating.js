@@ -15,7 +15,7 @@ StarRating.propTypes = {
   maxRating: PropTypes.number,
   defaultRating: PropTypes.number,
   color: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.number,
   className: PropTypes.string,
   messages: PropTypes.array,
   onSetRating: PropTypes.func,
@@ -42,7 +42,7 @@ function StarRating({
 
   function handleRating(newRating) {
     setRating(newRating);
-    onSetRating(newRating);
+    onSetRating && onSetRating(newRating);
   }
 
   return (
